@@ -225,3 +225,86 @@ repo_root=/home/fakevolcano/Escritorio/hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
 
+## [2026-10-25 05:26:53 UTC] Indexación y enlace de evidencias
+
+User Prompt (verbatim, secrets redacted):
+Sigue con el siguiente paso
+
+Agent Response Summary:
+Implementé indexación de evidencia estructurada y un enlace determinista con identidades actuales e históricas. El filtro descarta observaciones cuya captura o fecha interna sea posterior a audit_at; SQL se procesa en una base SQLite en memoria y solo se aceptan sentencias de carga conocidas. Añadí extracción opcional para PDF con pdftotext y para imágenes con Tesseract, y actualicé la documentación; la generación de decisiones y output.csv todavía queda pendiente. No ejecuté pruebas ni generé predicciones.
+
+Actions:
+* Edité README.md.
+* Añadí indexación y enlace en code/src/evidenceIndexer.ts y code/src/evidenceLinker.ts.
+* Actualicé code/src/types.ts, code/src/main.ts y code/src/identityResolver.ts.
+
+Context:
+tool=Codex
+model=GPT-6
+branch=main
+repo_root=/home/fakevolcano/Escritorio/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-25 05:36:34 UTC] Corrección de marca temporal: indexación de evidencias
+
+La entrada anterior usó por error la marca temporal de la entrada previa. Este asiento corrige la hora de esta interacción y conserva sus metadatos y resumen.
+
+User Prompt (verbatim, secrets redacted):
+Sigue con el siguiente paso
+
+Agent Response Summary:
+Implementé indexación de evidencia estructurada y un enlace determinista con identidades actuales e históricas. El filtro descarta observaciones cuya captura o fecha interna sea posterior a audit_at; SQL se procesa en una base SQLite en memoria y solo se aceptan sentencias de carga conocidas. Añadí extracción opcional para PDF con pdftotext y para imágenes con Tesseract, y actualicé la documentación; la generación de decisiones y output.csv todavía queda pendiente. No ejecuté pruebas ni generé predicciones.
+
+Actions:
+* Edité README.md.
+* Añadí indexación y enlace en code/src/evidenceIndexer.ts y code/src/evidenceLinker.ts.
+* Actualicé code/src/types.ts, code/src/main.ts y code/src/identityResolver.ts.
+
+Context:
+tool=Codex
+model=GPT-6
+branch=main
+repo_root=/home/fakevolcano/Escritorio/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-25T06:16:29Z] Calibración, evaluación y generación de entregables
+
+User Prompt (verbatim, secrets redacted):
+sigue con el siguiente paso
+
+Agent Response Summary:
+Seguí calibrando el motor con la muestra pública, corregí la priorización de observaciones completadas, la extracción de identificadores desde adjuntos PDF y el manejo de solicitudes de borrado negadas. Añadí una correlación temporal conservadora que usa actividades cercanas solo para localizar recursos, y exige una instantánea SQL posterior para afirmar el estado; la actividad no se toma como prueba del resultado. La corrida completa generó 518 filas: 43 COMPLETE, 466 INCOMPLETE y 9 NOT_APPLICABLE; la muestra pública quedó en 25/32 estados correctos y 10/32 secuencias exactas. Añadí tres casos propios, validador estructural, informes de evaluación/uso y empaqueté code.zip sin dataset ni dependencias instaladas.
+
+Actions:
+* Actualicé code/src/policyEngine.ts, code/src/evidenceIndexer.ts y code/src/intentClassifier.ts.
+* Añadí code/evaluation/custom_cases.ts y code/evaluation/validate_output.py; actualicé los informes de evaluación y uso.
+* Ejecuté la evaluación pública, los tres casos propios, la generación completa y la validación estructural de output.csv.
+* Generé y revisé code.zip; confirmé que contiene los archivos requeridos y excluye dataset, node_modules, dist y archivos de caché.
+
+Context:
+tool=Codex
+model=GPT-6
+branch=main
+repo_root=/home/fakevolcano/Escritorio/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+## [2026-10-25T06:17:58Z] Resumen de pendientes
+
+User Prompt (verbatim, secrets redacted):
+de manera corta y precisa . que falta?
+
+Agent Response Summary:
+Resumí los pendientes: mejorar el enlace de evidencia en los casos públicos que aún fallan y luego regenerar/validar los artefactos. Aclaré que los archivos de envío principales ya están generados.
+
+Actions:
+* Consulté la hora UTC para registrar este turno.
+
+Context:
+tool=Codex
+model=GPT-6
+branch=main
+repo_root=/home/fakevolcano/Escritorio/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none

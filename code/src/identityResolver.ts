@@ -105,9 +105,17 @@ export function resolveIdentityForRequest(
         }
 
         const fieldName = entry.field_name.trim().toLowerCase();
-        if (fieldName === "email" || fieldName === "phone" || fieldName === "email_hash") {
-          addValue(identifiers[fieldName], entry.old_value);
-          addValue(identifiers[fieldName], entry.new_value);
+        if (
+          fieldName === "email" ||
+          fieldName === "phone" ||
+          fieldName === "email_hash" ||
+          fieldName === "name" ||
+          fieldName === "full_name"
+        ) {
+          const identifierType =
+            fieldName === "full_name" ? "name" : fieldName;
+          addValue(identifiers[identifierType], entry.old_value);
+          addValue(identifiers[identifierType], entry.new_value);
           identityAuditIds.add(entry.audit_id);
         }
       }

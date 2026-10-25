@@ -98,6 +98,37 @@ export interface EvidenceFile {
   captured_at: string;
 }
 
+export type EvidenceFormat = "JSON" | "LOG" | "SQL" | "TEXT" | "PDF" | "IMAGE" | "UNKNOWN";
+
+export interface EvidenceArtifact {
+  file_id: string;
+  file_path: string;
+  captured_at: string;
+  format: EvidenceFormat;
+  parse_status: "INDEXED" | "UNSUPPORTED_MEDIA";
+  observation_count: number;
+}
+
+export interface EvidenceObservation {
+  evidence_id: string;
+  source_path: string;
+  captured_at: string;
+  observed_at: string;
+  source_format: EvidenceFormat;
+  system_id: string;
+  resource_id: string;
+  data_category: string;
+  state: string;
+  identifiers: Record<string, string[]>;
+  fields: Record<string, string>;
+  raw_text: string;
+}
+
+export interface EvidenceIndex {
+  artifacts: EvidenceArtifact[];
+  observations: EvidenceObservation[];
+}
+
 export interface AuditDataset {
   deletionRequests: DeletionRequest[];
   identities: UserIdentity[];

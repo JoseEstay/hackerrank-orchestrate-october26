@@ -41,7 +41,7 @@ npm --prefix code run dev
 
 The development command requires Node.js 24.12 or newer. The build command compiles the TypeScript source to JavaScript for the final run.
 
-The current loader validates the request, identity, history, activity, policy, and evidence-manifest CSVs. It classifies request intent before resolving each email against identity snapshots and history available by that request's `audit_at`. Evidence analysis and final prediction generation remain; the final run must write `output.csv` at the repository root.
+The current agent validates the request, identity, history, activity, policy, and evidence-manifest CSVs. It indexes JSON, logs, text, SQL, PDFs, and images; links observations to current and historical identity aliases using both manifest capture time and each record's own timestamp against `audit_at`; applies the supplied deletion rules; and writes `output.csv` at the repository root. PDF extraction uses Poppler's `pdftotext` command, which must be available on `PATH`. Image OCR uses Tesseract.js and the local English model included through the npm dependencies, so it does not require network access at run time. Evaluation reports and a full review of generated predictions remain part of the submission work.
 
 The blank template at `dataset/output.csv` is provided as a reference. Your final generated file for submission must be the root-level `output.csv`.
 

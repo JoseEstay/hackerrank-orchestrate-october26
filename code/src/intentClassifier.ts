@@ -10,7 +10,7 @@ const DELETION_TARGET =
   /\b(?:account|cuenta|compte|conta|profile|perfil|profil|personal\s+(?:data|information|details)|data\s+about\s+me|my\s+(?:data|information|records|details)|records?|registros?|enregistrements?|identifiers?|identifiants?|identificadores?|name|nombre|contact\s+details|coordonn[ée]es?|email|correo|phone|tel[eé]fonos?|telefone|analytics\s+data|support\s+(?:messages|conversations|attachments)|search\s+results?|export\s+files?|backups?|archives?|datos(?:\s+personales)?|donn[ée]es?(?:\s+personnelles?)?|dados(?:\s+pessoais)?|informacion(?:\s+personal)?|información(?:\s+personal)?|informations?\s+personnelles?)\b|アカウント|個人情報|識別情報|データ|プロフィール|계정|개인정보|식별 정보|데이터|프로필/i;
 
 const NEGATED_DELETION_ACTIONS = [
-  /\b(?:do\s+not|don['’]?t|never|cannot|can\s+not|can['’]?t)\s+(?:(?:want|need|wish)\s+to\s+)?(?:delete|deleting|deletion|erase|erasing|erasure|remove|removing|removal|close|closing|closure|cancel|cancellation)\b/gi,
+  /\b(?:do\s+not|don['’]?t|never|cannot|can\s+not|can['’]?t)\s+(?:(?:want|need|wish)\s+(?:(?:you|anyone|someone|anybody|them|us)\s+)?to\s+)?(?:delete|deleting|deletion|erase|erasing|erasure|remove|removing|removal|close|closing|closure|cancel|cancellation)\b/gi,
   /\bwithout\s+(?:deleting|erasing|removing|closing|canceling)\b/gi,
   /\bno\s+(?:(?:quiero|deseo|solicito)\s+)?(?:borrar|eliminar|suprimir|cerrar)\b/gi,
   /\bnao\s+(?:(?:quero|desejo|solicito)\s+)?(?:apagar|excluir|deletar|encerrar)\b/gi,
